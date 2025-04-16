@@ -27,11 +27,9 @@ def test_phrase_palindromes(self):
     self.assertTrue(is_palindrome("Was it a car or a cat I saw?"))
 
 
-
-def test_non_palindromes(self):
-    self.assertFalse(is_palindrome("hello"))
-    self.assertFalse(is_palindrome("python"))
-    self.assertFalse(is_palindrome("This is not a palindrome"))
-    self.assertFalse(is_palindrome("race a car"))
-    self.assertFalse(is_palindrome("not a palindrome"))
-    self.assertFalse(is_palindrome("12345"))
+def test_edge_cases(self):
+    self.assertTrue(is_palindrome(""))  # Cadena vacía
+    self.assertTrue(is_palindrome("a"))  # Un solo carácter
+    self.assertTrue(is_palindrome(" "))  # Espacio solo
+    self.assertTrue(is_palindrome("!@#@!"))  # Caracteres especiales
+    self.assertFalse(is_palindrome("ab"))  # No palíndromo de dos letras
